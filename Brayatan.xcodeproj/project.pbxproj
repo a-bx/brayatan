@@ -1,0 +1,236 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20CE43E015168647004EC80B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE43DF15168647004EC80B /* Foundation.framework */; };
+		20CE43E315168647004EC80B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CE43E215168647004EC80B /* main.m */; };
+		20CE43E715168647004EC80B /* Brayatan.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 20CE43E615168647004EC80B /* Brayatan.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		20CE43D915168647004EC80B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				20CE43E715168647004EC80B /* Brayatan.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		20CE43DB15168647004EC80B /* Brayatan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Brayatan; sourceTree = BUILT_PRODUCTS_DIR; };
+		20CE43DF15168647004EC80B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		20CE43E215168647004EC80B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		20CE43E515168647004EC80B /* Brayatan-Prefix.pch */ = {isa = PBXFileReference; path = "Brayatan-Prefix.pch"; sourceTree = "<group>"; };
+		20CE43E615168647004EC80B /* Brayatan.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Brayatan.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20CE43D815168647004EC80B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20CE43E015168647004EC80B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20CE43D015168646004EC80B = {
+			isa = PBXGroup;
+			children = (
+				20CE43E115168647004EC80B /* Brayatan */,
+				20CE43DE15168647004EC80B /* Frameworks */,
+				20CE43DC15168647004EC80B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20CE43DC15168647004EC80B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20CE43DB15168647004EC80B /* Brayatan */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20CE43DE15168647004EC80B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20CE43DF15168647004EC80B /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20CE43E115168647004EC80B /* Brayatan */ = {
+			isa = PBXGroup;
+			children = (
+				20CE43E215168647004EC80B /* main.m */,
+				20CE43E615168647004EC80B /* Brayatan.1 */,
+				20CE43E415168647004EC80B /* Supporting Files */,
+			);
+			path = Brayatan;
+			sourceTree = "<group>";
+		};
+		20CE43E415168647004EC80B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20CE43E515168647004EC80B /* Brayatan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20CE43DA15168647004EC80B /* Brayatan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20CE43EA15168647004EC80B /* Build configuration list for PBXNativeTarget "Brayatan" */;
+			buildPhases = (
+				20CE43D715168647004EC80B /* Sources */,
+				20CE43D815168647004EC80B /* Frameworks */,
+				20CE43D915168647004EC80B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Brayatan;
+			productName = Brayatan;
+			productReference = 20CE43DB15168647004EC80B /* Brayatan */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20CE43D215168646004EC80B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 20CE43D515168646004EC80B /* Build configuration list for PBXProject "Brayatan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 20CE43D015168646004EC80B;
+			productRefGroup = 20CE43DC15168647004EC80B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20CE43DA15168647004EC80B /* Brayatan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20CE43D715168647004EC80B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20CE43E315168647004EC80B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		20CE43E815168647004EC80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		20CE43E915168647004EC80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		20CE43EB15168647004EC80B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brayatan/Brayatan-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		20CE43EC15168647004EC80B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Brayatan/Brayatan-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20CE43D515168646004EC80B /* Build configuration list for PBXProject "Brayatan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20CE43E815168647004EC80B /* Debug */,
+				20CE43E915168647004EC80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20CE43EA15168647004EC80B /* Build configuration list for PBXNativeTarget "Brayatan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20CE43EB15168647004EC80B /* Debug */,
+				20CE43EC15168647004EC80B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20CE43D215168646004EC80B /* Project object */;
+}

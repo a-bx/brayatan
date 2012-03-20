@@ -105,7 +105,6 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
         uv_tcp->data = (__bridge void *)self;
     }
     
-    
     return self;
 }
 
@@ -129,6 +128,7 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
 + (Http *) createServerWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(id a, id b))callback {    
     Http *http = [[Http alloc] init];
     if ([http listenWithIP:ip atPort:port callback:callback]) {
+        NSLog(@"This is: %lu", http);
         return http;
     }
     return nil;

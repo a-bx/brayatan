@@ -777,6 +777,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 8C5C4470AE99DE5DE330356A /* Build configuration list for PBXProject "uv" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1023,7 +1024,6 @@
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks";
 				OTHER_CFLAGS = "-fno-strict-aliasing";
 				OTHER_LDFLAGS = "-Wl,-search_paths_first";
-				PREBINDING = NO;
 				PRODUCT_NAME = "run-benchmarks";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
@@ -1062,7 +1062,6 @@
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks";
 				OTHER_CFLAGS = "-fno-strict-aliasing";
 				OTHER_LDFLAGS = "-Wl,-search_paths_first";
-				PREBINDING = NO;
 				PRODUCT_NAME = "run-benchmarks";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
@@ -1101,7 +1100,6 @@
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks";
 				OTHER_CFLAGS = "-fno-strict-aliasing";
 				OTHER_LDFLAGS = "-Wl,-search_paths_first";
-				PREBINDING = NO;
 				PRODUCT_NAME = "run-tests";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
@@ -1145,7 +1143,6 @@
 				LIBRARY_SEARCH_PATHS = "$(SDKROOT)/System/Library/Frameworks";
 				OTHER_CFLAGS = "-fno-strict-aliasing";
 				OTHER_LDFLAGS = "-Wl,-search_paths_first";
-				PREBINDING = NO;
 				PRODUCT_NAME = "run-tests";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = (
@@ -1192,7 +1189,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-fno-strict-aliasing";
-				PREBINDING = NO;
 				PRODUCT_NAME = uv;
 				SDKROOT = macosx;
 				USE_HEADERMAP = NO;
@@ -1249,7 +1245,6 @@
 				);
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-fno-strict-aliasing";
-				PREBINDING = NO;
 				PRODUCT_NAME = uv;
 				SDKROOT = macosx;
 				USE_HEADERMAP = NO;

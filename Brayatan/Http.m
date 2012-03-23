@@ -7,26 +7,19 @@
 //
 
 #import "Http.h"
-
-#define RESPONSE \
-    "HTTP/1.1 200 OK\r\n" \
-    "Content-Type: text/plain\r\n" \
-    "Content-Length: 13\r\n" \
-    "Server: Brayatan Alfa\r\n" \
-    "\r\n" \
-    "hola flaites\n"
+#import "Request.h"
+#import "Response.h"
+#import "common.h"
 
 static http_parser_settings settings;
 
-typedef struct {
-    uv_tcp_t handle;
-    http_parser parser;
-    void *data;
-} client_t;
-
 void on_close(uv_handle_t *handle) {
     //NSLog(@"disconnected\n");
-    free(handle);
+    client_t *client = (client_t *)handle->data;
+    if (client->request != NULL) CFRelease(client->request);
+    if (client->response != NULL) CFRelease(client->response);
+    if (client->last_header_field != NULL) CFRelease(client->last_header_field);
+    free(client);
 }
 
 uv_buf_t on_alloc(uv_handle_t* handle, size_t suggested_size) {
@@ -55,45 +48,88 @@ void on_read(uv_stream_t* handle, ssize_t nread, uv_buf_t buf) {
     free(buf.base);
 }
 
-void on_after_write(uv_write_t* req, int status) {
-    uv_close((uv_handle_t*)req->handle, on_close);
-    free(req);
+int on_header_field(http_parser* parser, const char *at, size_t length) {
+    @autoreleasepool {
+        client_t *client = (client_t *)parser->data;
+        
+        void *last = client->last_header_field;
+        if (client->was_header_field) { /* append field */
+            client->last_header_field = (__bridge_retained void *)[NSString stringWithFormat:@"%@%.*s", last, length, at];
+        } else { /* create field */
+            client->last_header_field = (__bridge_retained void *)[NSString stringWithFormat:@"%.*s", length, at];
+            client->was_header_field = YES;
+        }
+        
+        if (last != NULL) CFRelease(last);
+        
+        client->was_header_value = NO;
+        return 0;
+    }
 }
 
+int on_header_value(http_parser* parser, const char *at, size_t length) {
+    @autoreleasepool {
+        client_t *client = (client_t *)parser->data;
+        Request *request = (__bridge Request *)client->request;
+        
+        if (client->was_header_value) { /* append value */
+            NSString *field = (__bridge NSString *)client->last_header_field;
+            NSString *value = [request.headers objectForKey:field];
+            [request.headers setObject:[NSString stringWithFormat:@"%@%.*s", value, length, at] forKey:field];
+        } else { /* create value */
+            NSString *field = (__bridge NSString *)client->last_header_field;
+            [request.headers setObject:[NSString stringWithFormat:@"%.*s", length, at] forKey:field];
+        }
+        
+        client->was_header_field = NO;
+        return 0;
+    }
+}
+
+
 int on_headers_complete(http_parser* parser) {
-    //NSLog(@"http message!");
-    client_t *client = (client_t *)parser->data;
-    
-    uv_write_t *write_req = malloc(sizeof(uv_write_t));
-    uv_buf_t write_buf;
-    write_buf.base = RESPONSE;
-    write_buf.len = sizeof(RESPONSE);
-    
-    uv_write(write_req, (uv_stream_t*)&client->handle, &write_buf, 1, on_after_write);
-    
-    return 0;
+    @autoreleasepool {
+        client_t *client = (client_t *)parser->data;
+        Response *response = client->response != NULL ? (__bridge Response *)client->response : nil;
+        Request *request = client->request != NULL ? (__bridge Request *)client->request : nil;
+        Http *http = (__bridge Http *)client->http;
+
+        [http invokeReq:request invokeRes:response];
+
+        uv_close((uv_handle_t*)&client->handle, on_close);
+        return 0;
+    }
 }
 
 void on_connection(uv_stream_t* uv_tcp, int status) {
-    //NSLog(@"connected: %@", uv_tcp->data);
-    
-    client_t *client = malloc(sizeof(client_t));
-    uv_tcp_init(uv_default_loop(), &client->handle);
-    int r = uv_accept(uv_tcp, (uv_stream_t*)&client->handle);
-    if (r) {
-        //NSLog(@"accept: %s\n", uv_strerror(uv_last_error(uv_default_loop())));
-        return;
-    }
-    
-    http_parser_init(&client->parser, HTTP_REQUEST);
-
-    client->handle.data = client;
-    client->parser.data = client;
-    client->data = uv_tcp->data;
-    
-    settings.on_headers_complete = on_headers_complete;
-    
-    uv_read_start((uv_stream_t*)&client->handle, on_alloc, on_read);
+        //NSLog(@"connected: %@", uv_tcp->data);
+        
+        client_t *client = malloc(sizeof(client_t));
+        client->request = NULL;
+        uv_tcp_init(uv_tcp->loop, &client->handle);
+        
+        int r = uv_accept(uv_tcp, (uv_stream_t*)&client->handle);
+        if (r) {
+            //NSLog(@"accept: %s\n", uv_strerror(uv_last_error(uv_default_loop())));
+            return;
+        }
+        
+        http_parser_init(&client->parser, HTTP_REQUEST);
+        
+        client->handle.data = client;
+        client->parser.data = client;
+        client->http = uv_tcp->data;
+        client->request =  (__bridge_retained void *)[[Request alloc] init];
+        client->response = (__bridge_retained void *)[[Response alloc] initWithClient:client];
+        client->was_header_field = NO;
+        client->was_header_value = NO;
+        client->last_header_field = NULL;
+        
+        settings.on_headers_complete = on_headers_complete;
+        settings.on_header_field = on_header_field;
+        settings.on_header_value = on_header_value;
+        
+        uv_read_start((uv_stream_t*)&client->handle, on_alloc, on_read);
 }
 
 @implementation Http
@@ -108,7 +144,11 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
     return self;
 }
 
-- (BOOL) listenWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(id a, id b))callback {
+- (void) sayHello:(NSString *)msg {
+    NSLog(@"Hello from: %@ %@", self, msg);
+}
+
+- (BOOL) listenWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(Request *req, Response *res))cb {
     int r = uv_tcp_bind(uv_tcp, uv_ip4_addr([ip cStringUsingEncoding:NSASCIIStringEncoding], port));
     
     if (r) {
@@ -121,14 +161,20 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
         //NSLog(@"listen: %s\n", uv_strerror(uv_last_error(NULL)));
         return NO;
     }
+    
+    callback = cb;
         
     return YES;
 }
 
-+ (Http *) createServerWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(id a, id b))callback {    
+- (void) invokeReq:(Request *)req invokeRes:(Response *)res {
+    callback(req, res);
+}
+
+
++ (Http *) createServerWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(Request *req, Response *res))callback {
     Http *http = [[Http alloc] init];
     if ([http listenWithIP:ip atPort:port callback:callback]) {
-        NSLog(@"This is: %lu", http);
         return http;
     }
     return nil;

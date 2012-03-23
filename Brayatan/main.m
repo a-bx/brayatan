@@ -10,12 +10,18 @@
 #import "Http.h"
 #import "uv.h"
 
+static int count = 0;
 int main(int argc, const char * argv[]) {
     @autoreleasepool {        
         NSLog(@"Hello, World!");
     
-        Http *http = [Http createServerWithIP:@"127.0.0.1" atPort:8000 callback:^(id a, id b) {
-            NSLog(@"Accepted connection!\n");
+//        __block int count = 0;
+        
+        Http *http = [Http createServerWithIP:@"127.0.0.1" atPort:8000 callback:^(Request *req, Response *res) {
+            //NSLog(@"Accepted connection for user-agent: %@!\n", [req.headers objectForKey:@"User-Agent"]);
+            res.status = 200;
+            [res.headers setObject:@"Content-type" forKey:@"text/plain"];
+            [res endWithBody:[NSString stringWithFormat:@"Hello Client number %d!\n", count++]];
         }];
         
         NSLog(@"http: %@", http);

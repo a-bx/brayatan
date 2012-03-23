@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "uv.h"
-#import "http_parser.h"
+#import "Request.h"
+#import "Response.h"
 
 @interface Http : NSObject {
     uv_tcp_t *uv_tcp;
+    void (^callback)(Request *req, Response *res);
 }
 
-+ (Http *) createServerWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(id a, id b))callback;
+- (void) sayHello:(NSString *)msg;
+- (void) invokeReq:(Request *)req invokeRes:(Response *)res;
++ (Http *) createServerWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(Request *req, Response *res))callback;
 
 @end

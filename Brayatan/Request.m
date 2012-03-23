@@ -10,4 +10,14 @@
 
 @implementation Request
 
+@synthesize headers;
+
+- (id) init {
+    if (self = [super init]) {
+        headers = [[NSMutableDictionary alloc] init];
+    }
+    
+    return self;
+}
+
 @end

@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Request : NSObject
+@interface Request : NSObject {
+}
+
+@property (retain, nonatomic) NSMutableDictionary *headers;
 
 @end

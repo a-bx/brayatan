@@ -13,6 +13,7 @@
 		20CE43E315168647004EC80B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CE43E215168647004EC80B /* main.m */; };
 		20CE4402151686D5004EC80B /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE43FA151686B0004EC80B /* libuv.a */; };
 		20CE44051516894B004EC80B /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CE44041516894B004EC80B /* Http.m */; };
+		20DDFB6415198521006BF890 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DDFB6315198521006BF890 /* Response.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,9 @@
 		20CE43ED151686B0004EC80B /* uv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = uv.xcodeproj; path = libuv/uv.xcodeproj; sourceTree = "<group>"; };
 		20CE44031516894B004EC80B /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
 		20CE44041516894B004EC80B /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
+		20DDFB6215198521006BF890 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		20DDFB6315198521006BF890 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		20DDFB6515199191006BF890 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,10 +151,13 @@
 			children = (
 				209D1640151701D300128E76 /* Request.h */,
 				209D1641151701D300128E76 /* Request.m */,
+				20DDFB6215198521006BF890 /* Response.h */,
+				20DDFB6315198521006BF890 /* Response.m */,
 				20CE44031516894B004EC80B /* Http.h */,
 				20CE44041516894B004EC80B /* Http.m */,
 				20CE43E215168647004EC80B /* main.m */,
 				20CE43E415168647004EC80B /* Supporting Files */,
+				20DDFB6515199191006BF890 /* common.h */,
 			);
 			path = Brayatan;
 			sourceTree = "<group>";
@@ -277,6 +284,7 @@
 				20CE43E315168647004EC80B /* main.m in Sources */,
 				20CE44051516894B004EC80B /* Http.m in Sources */,
 				209D1642151701D300128E76 /* Request.m in Sources */,
+				20DDFB6415198521006BF890 /* Response.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

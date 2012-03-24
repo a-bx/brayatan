@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "common.h"
 
+void on_close(uv_handle_t *handle);
+
 
 @interface Response : NSObject {
     client_t *client;

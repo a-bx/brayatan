@@ -15,7 +15,6 @@
     void (^callback)(Request *req, Response *res);
 }
 
-- (void) sayHello:(NSString *)msg;
 - (void) invokeReq:(Request *)req invokeRes:(Response *)res;
 + (Http *) createServerWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(Request *req, Response *res))callback;
 

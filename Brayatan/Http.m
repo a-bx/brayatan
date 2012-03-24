@@ -14,7 +14,6 @@
 static http_parser_settings settings;
 
 void on_close(uv_handle_t *handle) {
-    //NSLog(@"disconnected\n");
     client_t *client = (client_t *)handle->data;
     if (client->request != NULL) CFRelease(client->request);
     if (client->response != NULL) CFRelease(client->response);
@@ -42,7 +41,7 @@ void on_read(uv_stream_t* handle, ssize_t nread, uv_buf_t buf) {
         if (err.code == UV_EOF) {
             uv_close((uv_handle_t*)handle, on_close);
         } else {
-            //NSLog(@"read: %s", uv_strerror(err));
+            /* handle error here */
         }
     }
     free(buf.base);
@@ -93,10 +92,9 @@ int on_headers_complete(http_parser* parser) {
         Response *response = client->response != NULL ? (__bridge Response *)client->response : nil;
         Request *request = client->request != NULL ? (__bridge Request *)client->request : nil;
         Http *http = (__bridge Http *)client->http;
-
+        
         [http invokeReq:request invokeRes:response];
 
-        uv_close((uv_handle_t*)&client->handle, on_close);
         return 0;
     }
 }
@@ -144,21 +142,15 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
     return self;
 }
 
-- (void) sayHello:(NSString *)msg {
-    NSLog(@"Hello from: %@ %@", self, msg);
-}
-
 - (BOOL) listenWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(Request *req, Response *res))cb {
     int r = uv_tcp_bind(uv_tcp, uv_ip4_addr([ip cStringUsingEncoding:NSASCIIStringEncoding], port));
     
     if (r) {
-        //NSLog(@"bind: %s\n", uv_strerror(uv_last_error(NULL)));
         return NO;
     }
     
     r = uv_listen((uv_stream_t*)uv_tcp, 128, on_connection);
     if (r) {
-        //NSLog(@"listen: %s\n", uv_strerror(uv_last_error(NULL)));
         return NO;
     }
     

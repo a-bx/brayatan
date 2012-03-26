@@ -117,7 +117,6 @@
 		9BD30766B6E1A773697FACAC /* ares_parse_srv_reply.c in Sources */ = {isa = PBXBuildFile; fileRef = 96C9B2BC5035C8DC62B1BDB7 /* ares_parse_srv_reply.c */; };
 		9C960D432BB4112DBF2ACE01 /* test-udp-ipv6.c in Sources */ = {isa = PBXBuildFile; fileRef = 3DC7B54C76C44A7ED402E734 /* test-udp-ipv6.c */; };
 		9CC4B28E80B2281391521F33 /* test-idle.c in Sources */ = {isa = PBXBuildFile; fileRef = C6C0358734B0B1F9B852FD94 /* test-idle.c */; };
-		9D2325F2B2DA08B4EB0DE96B /* -lm in Frameworks */ = {isa = PBXBuildFile; fileRef = 318EA9866DFFC64ACAC4F152 /* -lm */; };
 		9DC77F51F24DFE27578D24F7 /* test-thread.c in Sources */ = {isa = PBXBuildFile; fileRef = F352721F73E72394A3FE9461 /* test-thread.c */; };
 		A27F5882B0748563D9B6266E /* test-ipc.c in Sources */ = {isa = PBXBuildFile; fileRef = D6DAE8C2782A52106270890A /* test-ipc.c */; };
 		A30223CF473141CA4AAFEAB7 /* test-stdio-over-pipes.c in Sources */ = {isa = PBXBuildFile; fileRef = BC29DD05C9D8E927B20DFA52 /* test-stdio-over-pipes.c */; };
@@ -423,7 +422,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D2325F2B2DA08B4EB0DE96B /* -lm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

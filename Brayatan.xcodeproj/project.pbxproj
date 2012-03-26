@@ -7,69 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2048F49C1516C4210032832D /* libhttp_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2048F4971516C40A0032832D /* libhttp_parser.a */; };
-		209D1642151701D300128E76 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D1641151701D300128E76 /* Request.m */; };
-		20CE43E015168647004EC80B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE43DF15168647004EC80B /* Foundation.framework */; };
-		20CE43E315168647004EC80B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CE43E215168647004EC80B /* main.m */; };
-		20CE4402151686D5004EC80B /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE43FA151686B0004EC80B /* libuv.a */; };
-		20CE44051516894B004EC80B /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CE44041516894B004EC80B /* Http.m */; };
-		20DDFB6415198521006BF890 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 20DDFB6315198521006BF890 /* Response.m */; };
+		200F92A51520F4C200D3775A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20CE43DF15168647004EC80B /* Foundation.framework */; };
+		200F92A81520F4C300D3775A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 200F92A71520F4C300D3775A /* main.m */; };
+		20EC63D71520F8C300A7C590 /* libbrayatan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC638F1520F81C00A7C590 /* libbrayatan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2048F4961516C40A0032832D /* PBXContainerItemProxy */ = {
+		20EC638E1520F81C00A7C590 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2048F48C1516C4090032832D /* http_parser.xcodeproj */;
+			containerPortal = 20EC638A1520F81C00A7C590 /* brayatan.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 1801301F7038583B51A4D241;
-			remoteInfo = http_parser;
+			remoteGlobalIDString = 20EC63761520F81300A7C590;
+			remoteInfo = brayatan;
 		};
-		2048F4981516C40A0032832D /* PBXContainerItemProxy */ = {
+		20EC63D51520F8BF00A7C590 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2048F48C1516C4090032832D /* http_parser.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 69663840867AD51514E537ED;
-			remoteInfo = test;
-		};
-		2048F49A1516C41C0032832D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2048F48C1516C4090032832D /* http_parser.xcodeproj */;
+			containerPortal = 20EC638A1520F81C00A7C590 /* brayatan.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C3D692EDB432A59FB72344A;
-			remoteInfo = http_parser;
-		};
-		20CE43F9151686B0004EC80B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20CE43ED151686B0004EC80B /* uv.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 1366FBDA3B41EA03E9CC86CA;
-			remoteInfo = uv;
-		};
-		20CE43FB151686B0004EC80B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20CE43ED151686B0004EC80B /* uv.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 64757BCA7335FEFCED9A25EC;
-			remoteInfo = "run-tests";
-		};
-		20CE43FD151686B0004EC80B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20CE43ED151686B0004EC80B /* uv.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0F9AD78A28D4AB83078B4C46;
-			remoteInfo = "run-benchmarks";
-		};
-		20CE4400151686D1004EC80B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20CE43ED151686B0004EC80B /* uv.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FC830AC267A152249CF4E152;
-			remoteInfo = uv;
+			remoteGlobalIDString = 20EC63751520F81300A7C590;
+			remoteInfo = brayatan;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		20CE43D915168647004EC80B /* CopyFiles */ = {
+		200F92A11520F4C200D3775A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -81,50 +42,48 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2048F48C1516C4090032832D /* http_parser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = http_parser.xcodeproj; path = "http-parser/http_parser.xcodeproj"; sourceTree = "<group>"; };
-		209D1640151701D300128E76 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
-		209D1641151701D300128E76 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
-		20CE43DB15168647004EC80B /* Brayatan */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Brayatan; sourceTree = BUILT_PRODUCTS_DIR; };
+		200F92A31520F4C200D3775A /* test01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test01; sourceTree = BUILT_PRODUCTS_DIR; };
+		200F92A71520F4C300D3775A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		200F92AA1520F4C300D3775A /* test01-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test01-Prefix.pch"; sourceTree = "<group>"; };
 		20CE43DF15168647004EC80B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		20CE43E215168647004EC80B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		20CE43E515168647004EC80B /* Brayatan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Brayatan-Prefix.pch"; sourceTree = "<group>"; };
-		20CE43ED151686B0004EC80B /* uv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = uv.xcodeproj; path = libuv/uv.xcodeproj; sourceTree = "<group>"; };
-		20CE44031516894B004EC80B /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
-		20CE44041516894B004EC80B /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
-		20DDFB6215198521006BF890 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
-		20DDFB6315198521006BF890 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
-		20DDFB6515199191006BF890 /* common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = "<group>"; };
+		20EC638A1520F81C00A7C590 /* brayatan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = brayatan.xcodeproj; path = brayatan/brayatan.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		20CE43D815168647004EC80B /* Frameworks */ = {
+		200F92A01520F4C200D3775A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2048F49C1516C4210032832D /* libhttp_parser.a in Frameworks */,
-				20CE4402151686D5004EC80B /* libuv.a in Frameworks */,
-				20CE43E015168647004EC80B /* Foundation.framework in Frameworks */,
+				20EC63D71520F8C300A7C590 /* libbrayatan.a in Frameworks */,
+				200F92A51520F4C200D3775A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2048F48D1516C4090032832D /* Products */ = {
+		200F92A61520F4C200D3775A /* test01 */ = {
 			isa = PBXGroup;
 			children = (
-				2048F4971516C40A0032832D /* libhttp_parser.a */,
-				2048F4991516C40A0032832D /* test */,
+				200F92A71520F4C300D3775A /* main.m */,
+				200F92A91520F4C300D3775A /* Supporting Files */,
 			);
-			name = Products;
+			path = test01;
+			sourceTree = "<group>";
+		};
+		200F92A91520F4C300D3775A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				200F92AA1520F4C300D3775A /* test01-Prefix.pch */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		20CE43D015168646004EC80B = {
 			isa = PBXGroup;
 			children = (
-				2048F48C1516C4090032832D /* http_parser.xcodeproj */,
-				20CE43ED151686B0004EC80B /* uv.xcodeproj */,
-				20CE43E115168647004EC80B /* Brayatan */,
+				20EC638A1520F81C00A7C590 /* brayatan.xcodeproj */,
+				200F92A61520F4C200D3775A /* test01 */,
 				20CE43DE15168647004EC80B /* Frameworks */,
 				20CE43DC15168647004EC80B /* Products */,
 			);
@@ -133,7 +92,7 @@
 		20CE43DC15168647004EC80B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20CE43DB15168647004EC80B /* Brayatan */,
+				200F92A31520F4C200D3775A /* test01 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,36 +105,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		20CE43E115168647004EC80B /* Brayatan */ = {
+		20EC638B1520F81C00A7C590 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				209D1640151701D300128E76 /* Request.h */,
-				209D1641151701D300128E76 /* Request.m */,
-				20DDFB6215198521006BF890 /* Response.h */,
-				20DDFB6315198521006BF890 /* Response.m */,
-				20CE44031516894B004EC80B /* Http.h */,
-				20CE44041516894B004EC80B /* Http.m */,
-				20CE43E215168647004EC80B /* main.m */,
-				20CE43E415168647004EC80B /* Supporting Files */,
-				20DDFB6515199191006BF890 /* common.h */,
-			);
-			path = Brayatan;
-			sourceTree = "<group>";
-		};
-		20CE43E415168647004EC80B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				20CE43E515168647004EC80B /* Brayatan-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		20CE43EE151686B0004EC80B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				20CE43FA151686B0004EC80B /* libuv.a */,
-				20CE43FC151686B0004EC80B /* run-tests */,
-				20CE43FE151686B0004EC80B /* run-benchmarks */,
+				20EC638F1520F81C00A7C590 /* libbrayatan.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,23 +116,22 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20CE43DA15168647004EC80B /* Brayatan */ = {
+		200F92A21520F4C200D3775A /* test01 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20CE43EA15168647004EC80B /* Build configuration list for PBXNativeTarget "Brayatan" */;
+			buildConfigurationList = 200F92AD1520F4C300D3775A /* Build configuration list for PBXNativeTarget "test01" */;
 			buildPhases = (
-				20CE43D715168647004EC80B /* Sources */,
-				20CE43D815168647004EC80B /* Frameworks */,
-				20CE43D915168647004EC80B /* CopyFiles */,
+				200F929F1520F4C200D3775A /* Sources */,
+				200F92A01520F4C200D3775A /* Frameworks */,
+				200F92A11520F4C200D3775A /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2048F49B1516C41C0032832D /* PBXTargetDependency */,
-				20CE4401151686D1004EC80B /* PBXTargetDependency */,
+				20EC63D61520F8BF00A7C590 /* PBXTargetDependency */,
 			);
-			name = Brayatan;
-			productName = Brayatan;
-			productReference = 20CE43DB15168647004EC80B /* Brayatan */;
+			name = test01;
+			productName = test01;
+			productReference = 200F92A31520F4C200D3775A /* test01 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -223,87 +155,65 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2048F48D1516C4090032832D /* Products */;
-					ProjectRef = 2048F48C1516C4090032832D /* http_parser.xcodeproj */;
-				},
-				{
-					ProductGroup = 20CE43EE151686B0004EC80B /* Products */;
-					ProjectRef = 20CE43ED151686B0004EC80B /* uv.xcodeproj */;
+					ProductGroup = 20EC638B1520F81C00A7C590 /* Products */;
+					ProjectRef = 20EC638A1520F81C00A7C590 /* brayatan.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				20CE43DA15168647004EC80B /* Brayatan */,
+				200F92A21520F4C200D3775A /* test01 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2048F4971516C40A0032832D /* libhttp_parser.a */ = {
+		20EC638F1520F81C00A7C590 /* libbrayatan.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libhttp_parser.a;
-			remoteRef = 2048F4961516C40A0032832D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2048F4991516C40A0032832D /* test */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = test;
-			remoteRef = 2048F4981516C40A0032832D /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		20CE43FA151686B0004EC80B /* libuv.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libuv.a;
-			remoteRef = 20CE43F9151686B0004EC80B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		20CE43FC151686B0004EC80B /* run-tests */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = "run-tests";
-			remoteRef = 20CE43FB151686B0004EC80B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		20CE43FE151686B0004EC80B /* run-benchmarks */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = "run-benchmarks";
-			remoteRef = 20CE43FD151686B0004EC80B /* PBXContainerItemProxy */;
+			path = libbrayatan.a;
+			remoteRef = 20EC638E1520F81C00A7C590 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
-		20CE43D715168647004EC80B /* Sources */ = {
+		200F929F1520F4C200D3775A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20CE43E315168647004EC80B /* main.m in Sources */,
-				20CE44051516894B004EC80B /* Http.m in Sources */,
-				209D1642151701D300128E76 /* Request.m in Sources */,
-				20DDFB6415198521006BF890 /* Response.m in Sources */,
+				200F92A81520F4C300D3775A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2048F49B1516C41C0032832D /* PBXTargetDependency */ = {
+		20EC63D61520F8BF00A7C590 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = http_parser;
-			targetProxy = 2048F49A1516C41C0032832D /* PBXContainerItemProxy */;
-		};
-		20CE4401151686D1004EC80B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = uv;
-			targetProxy = 20CE4400151686D1004EC80B /* PBXContainerItemProxy */;
+			name = brayatan;
+			targetProxy = 20EC63D51520F8BF00A7C590 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		200F92AE1520F4C300D3775A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test01/test01-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		200F92AF1520F4C300D3775A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test01/test01-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		20CE43E815168647004EC80B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,6 +238,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "brayatan/** libuv/include/** http-parser/**";
 			};
 			name = Debug;
 		};
@@ -348,48 +259,27 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		20CE43EB15168647004EC80B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Brayatan/Brayatan-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "libuv/include/** http-parser/**";
-			};
-			name = Debug;
-		};
-		20CE43EC15168647004EC80B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Brayatan/Brayatan-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "libuv/include/** http-parser/**";
+				USER_HEADER_SEARCH_PATHS = "brayatan/** libuv/include/** http-parser/**";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		200F92AD1520F4C300D3775A /* Build configuration list for PBXNativeTarget "test01" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				200F92AE1520F4C300D3775A /* Debug */,
+				200F92AF1520F4C300D3775A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		20CE43D515168646004EC80B /* Build configuration list for PBXProject "Brayatan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20CE43E815168647004EC80B /* Debug */,
 				20CE43E915168647004EC80B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		20CE43EA15168647004EC80B /* Build configuration list for PBXNativeTarget "Brayatan" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				20CE43EB15168647004EC80B /* Debug */,
-				20CE43EC15168647004EC80B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

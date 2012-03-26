@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20EC637A1520F81300A7C590 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63791520F81300A7C590 /* Cocoa.framework */; };
+		20EC63C81520F87E00A7C590 /* brayatan-common.h in Headers */ = {isa = PBXBuildFile; fileRef = 20EC63C11520F87E00A7C590 /* brayatan-common.h */; };
+		20EC63C91520F87E00A7C590 /* Http.h in Headers */ = {isa = PBXBuildFile; fileRef = 20EC63C21520F87E00A7C590 /* Http.h */; };
+		20EC63CA1520F87E00A7C590 /* Http.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EC63C31520F87E00A7C590 /* Http.m */; };
+		20EC63CB1520F87E00A7C590 /* Request.h in Headers */ = {isa = PBXBuildFile; fileRef = 20EC63C41520F87E00A7C590 /* Request.h */; };
+		20EC63CC1520F87E00A7C590 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EC63C51520F87E00A7C590 /* Request.m */; };
+		20EC63CD1520F87E00A7C590 /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 20EC63C61520F87E00A7C590 /* Response.h */; };
+		20EC63CE1520F87E00A7C590 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EC63C71520F87E00A7C590 /* Response.m */; };
+		20EC63D31520F89B00A7C590 /* libhttp_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63BE1520F83500A7C590 /* libhttp_parser.a */; };
+		20EC63D41520F89E00A7C590 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63B11520F82F00A7C590 /* libuv.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		20EC63B01520F82F00A7C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1366FBDA3B41EA03E9CC86CA;
+			remoteInfo = uv;
+		};
+		20EC63B21520F82F00A7C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 64757BCA7335FEFCED9A25EC;
+			remoteInfo = "run-tests";
+		};
+		20EC63B41520F82F00A7C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0F9AD78A28D4AB83078B4C46;
+			remoteInfo = "run-benchmarks";
+		};
+		20EC63BD1520F83500A7C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63B71520F83500A7C590 /* http_parser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1801301F7038583B51A4D241;
+			remoteInfo = http_parser;
+		};
+		20EC63BF1520F83500A7C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63B71520F83500A7C590 /* http_parser.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 69663840867AD51514E537ED;
+			remoteInfo = test;
+		};
+		20EC63CF1520F89200A7C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FC830AC267A152249CF4E152;
+			remoteInfo = uv;
+		};
+		20EC63D11520F89500A7C590 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63B71520F83500A7C590 /* http_parser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C3D692EDB432A59FB72344A;
+			remoteInfo = http_parser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		20EC63761520F81300A7C590 /* libbrayatan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libbrayatan.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		20EC63791520F81300A7C590 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		20EC637C1520F81300A7C590 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		20EC637D1520F81300A7C590 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		20EC637E1520F81300A7C590 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		20EC63811520F81300A7C590 /* brayatan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "brayatan-Prefix.pch"; sourceTree = "<group>"; };
+		20EC63A91520F82F00A7C590 /* uv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = uv.xcodeproj; path = /Users/amartoq/proj/osx/brayatan/libbrayatan/../libuv/uv.xcodeproj; sourceTree = "<absolute>"; };
+		20EC63B71520F83500A7C590 /* http_parser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = http_parser.xcodeproj; path = "/Users/amartoq/proj/osx/brayatan/libbrayatan/../http-parser/http_parser.xcodeproj"; sourceTree = "<absolute>"; };
+		20EC63C11520F87E00A7C590 /* brayatan-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "brayatan-common.h"; sourceTree = "<group>"; };
+		20EC63C21520F87E00A7C590 /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
+		20EC63C31520F87E00A7C590 /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
+		20EC63C41520F87E00A7C590 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
+		20EC63C51520F87E00A7C590 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
+		20EC63C61520F87E00A7C590 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
+		20EC63C71520F87E00A7C590 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20EC63731520F81300A7C590 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EC63D41520F89E00A7C590 /* libuv.a in Frameworks */,
+				20EC63D31520F89B00A7C590 /* libhttp_parser.a in Frameworks */,
+				20EC637A1520F81300A7C590 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20EC636B1520F81300A7C590 = {
+			isa = PBXGroup;
+			children = (
+				20EC63B71520F83500A7C590 /* http_parser.xcodeproj */,
+				20EC63A91520F82F00A7C590 /* uv.xcodeproj */,
+				20EC637F1520F81300A7C590 /* brayatan */,
+				20EC63781520F81300A7C590 /* Frameworks */,
+				20EC63771520F81300A7C590 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20EC63771520F81300A7C590 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20EC63761520F81300A7C590 /* libbrayatan.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20EC63781520F81300A7C590 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20EC63791520F81300A7C590 /* Cocoa.framework */,
+				20EC637B1520F81300A7C590 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20EC637B1520F81300A7C590 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20EC637C1520F81300A7C590 /* AppKit.framework */,
+				20EC637D1520F81300A7C590 /* CoreData.framework */,
+				20EC637E1520F81300A7C590 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		20EC637F1520F81300A7C590 /* brayatan */ = {
+			isa = PBXGroup;
+			children = (
+				20EC63C11520F87E00A7C590 /* brayatan-common.h */,
+				20EC63C21520F87E00A7C590 /* Http.h */,
+				20EC63C31520F87E00A7C590 /* Http.m */,
+				20EC63C41520F87E00A7C590 /* Request.h */,
+				20EC63C51520F87E00A7C590 /* Request.m */,
+				20EC63C61520F87E00A7C590 /* Response.h */,
+				20EC63C71520F87E00A7C590 /* Response.m */,
+				20EC63801520F81300A7C590 /* Supporting Files */,
+			);
+			path = brayatan;
+			sourceTree = "<group>";
+		};
+		20EC63801520F81300A7C590 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				20EC63811520F81300A7C590 /* brayatan-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		20EC63AA1520F82F00A7C590 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20EC63B11520F82F00A7C590 /* libuv.a */,
+				20EC63B31520F82F00A7C590 /* run-tests */,
+				20EC63B51520F82F00A7C590 /* run-benchmarks */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20EC63B81520F83500A7C590 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20EC63BE1520F83500A7C590 /* libhttp_parser.a */,
+				20EC63C01520F83500A7C590 /* test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		20EC63741520F81300A7C590 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EC63C81520F87E00A7C590 /* brayatan-common.h in Headers */,
+				20EC63C91520F87E00A7C590 /* Http.h in Headers */,
+				20EC63CB1520F87E00A7C590 /* Request.h in Headers */,
+				20EC63CD1520F87E00A7C590 /* Response.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		20EC63751520F81300A7C590 /* brayatan */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20EC63871520F81300A7C590 /* Build configuration list for PBXNativeTarget "brayatan" */;
+			buildPhases = (
+				20EC63721520F81300A7C590 /* Sources */,
+				20EC63731520F81300A7C590 /* Frameworks */,
+				20EC63741520F81300A7C590 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				20EC63D21520F89500A7C590 /* PBXTargetDependency */,
+				20EC63D01520F89200A7C590 /* PBXTargetDependency */,
+			);
+			name = brayatan;
+			productName = brayatan;
+			productReference = 20EC63761520F81300A7C590 /* libbrayatan.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20EC636D1520F81300A7C590 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 20EC63701520F81300A7C590 /* Build configuration list for PBXProject "brayatan" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 20EC636B1520F81300A7C590;
+			productRefGroup = 20EC63771520F81300A7C590 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 20EC63B81520F83500A7C590 /* Products */;
+					ProjectRef = 20EC63B71520F83500A7C590 /* http_parser.xcodeproj */;
+				},
+				{
+					ProductGroup = 20EC63AA1520F82F00A7C590 /* Products */;
+					ProjectRef = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				20EC63751520F81300A7C590 /* brayatan */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		20EC63B11520F82F00A7C590 /* libuv.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libuv.a;
+			remoteRef = 20EC63B01520F82F00A7C590 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20EC63B31520F82F00A7C590 /* run-tests */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "run-tests";
+			remoteRef = 20EC63B21520F82F00A7C590 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20EC63B51520F82F00A7C590 /* run-benchmarks */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = "run-benchmarks";
+			remoteRef = 20EC63B41520F82F00A7C590 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20EC63BE1520F83500A7C590 /* libhttp_parser.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhttp_parser.a;
+			remoteRef = 20EC63BD1520F83500A7C590 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		20EC63C01520F83500A7C590 /* test */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = test;
+			remoteRef = 20EC63BF1520F83500A7C590 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20EC63721520F81300A7C590 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20EC63CA1520F87E00A7C590 /* Http.m in Sources */,
+				20EC63CC1520F87E00A7C590 /* Request.m in Sources */,
+				20EC63CE1520F87E00A7C590 /* Response.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		20EC63D01520F89200A7C590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = uv;
+			targetProxy = 20EC63CF1520F89200A7C590 /* PBXContainerItemProxy */;
+		};
+		20EC63D21520F89500A7C590 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = http_parser;
+			targetProxy = 20EC63D11520F89500A7C590 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20EC63851520F81300A7C590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../http-parser/** ../libuv/include/**";
+			};
+			name = Debug;
+		};
+		20EC63861520F81300A7C590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../http-parser/** ../libuv/include/**";
+			};
+			name = Release;
+		};
+		20EC63881520F81300A7C590 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "brayatan/brayatan-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		20EC63891520F81300A7C590 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "brayatan/brayatan-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20EC63701520F81300A7C590 /* Build configuration list for PBXProject "brayatan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20EC63851520F81300A7C590 /* Debug */,
+				20EC63861520F81300A7C590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20EC63871520F81300A7C590 /* Build configuration list for PBXNativeTarget "brayatan" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20EC63881520F81300A7C590 /* Debug */,
+				20EC63891520F81300A7C590 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20EC636D1520F81300A7C590 /* Project object */;
+}

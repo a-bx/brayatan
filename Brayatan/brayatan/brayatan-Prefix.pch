@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'brayatan' target in the 'brayatan' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

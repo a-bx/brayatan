@@ -43,8 +43,9 @@
 
 /* Begin PBXFileReference section */
 		200F92A31520F4C200D3775A /* test01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test01; sourceTree = BUILT_PRODUCTS_DIR; };
-		200F92A71520F4C300D3775A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		200F92A71520F4C300D3775A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		200F92AA1520F4C300D3775A /* test01-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test01-Prefix.pch"; sourceTree = "<group>"; };
+		20B5316215210759008333CA /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		20CE43DF15168647004EC80B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		20EC638A1520F81C00A7C590 /* brayatan.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = brayatan.xcodeproj; path = brayatan/brayatan.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +83,7 @@
 		20CE43D015168646004EC80B = {
 			isa = PBXGroup;
 			children = (
+				20B5316215210759008333CA /* LICENSE */,
 				20EC638A1520F81C00A7C590 /* brayatan.xcodeproj */,
 				200F92A61520F4C200D3775A /* test01 */,
 				20CE43DE15168647004EC80B /* Frameworks */,

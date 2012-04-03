@@ -98,6 +98,13 @@ static NSString *statusCode(int status) {
     return self;
 }
 
+- (Response *)setHeader:(NSString *)header value:(NSString *)value {
+    [headers setObject:value forKey:header];
+    
+    return self;
+}
+
+
 - (BOOL)endWithBody:(NSString *)body {
     NSMutableString *tmp = [[NSMutableString alloc] init];
 
@@ -114,3 +121,4 @@ static NSString *statusCode(int status) {
 }
 
 @end
+

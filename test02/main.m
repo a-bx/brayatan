@@ -23,11 +23,16 @@ int main(int argc, const char * argv[]) {
     
     @autoreleasepool {
         Http *http = [Http createServerWithIP:@"127.0.0.1" atPort:8888 callback:^(Request *req, Response *res) {
+            
+            [res setHeader:@"Content-Type" value:@"text/html; charset=utf-8"];
             if ([req.url hasPrefix:@"/contar"]) {
                 [res endWithBody:@"hello!"];
-            } else {
-                NSString *string = [NSString stringWithFormat:@"hola flaite numero %d fib 40 es %d\n", count++, fibonnacci(1)];
+            } else if ([req.url isEqualToString:@"/"]) {
+                NSString *string = [NSString stringWithFormat:@"hola flaite numero %d fib 40 es %d\n", ++count, fibonnacci(10)];
                 [res endWithBody:string];
+            } else {
+                res.status = 404;
+                [res endWithBody:[NSString stringWithFormat:@"La página %@ no existe", req.url]];
             }
         }];
         

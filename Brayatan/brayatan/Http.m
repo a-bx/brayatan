@@ -101,8 +101,32 @@ int on_header_value(http_parser* parser, const char *at, size_t length) {
     }
 }
 
+int on_url (http_parser* parser, const char *at, size_t length) {
+    @autoreleasepool {
+        client_t *client = (client_t *)parser->data;
+        Request *request = (__bridge Request *)client->request;
+        
+        request.url = (request.url == nil ? [NSString stringWithFormat:@"%.*s", length, at] : [NSString stringWithFormat:@"%@%.*s", request.url, length, at]);
+        return 0;
+    }
+}
+
 
 int on_headers_complete(http_parser* parser) {
+//    @autoreleasepool {
+//        client_t *client = (client_t *)parser->data;
+//        Response *response = client->response != NULL ? (__bridge Response *)client->response : nil;
+//        Request *request = client->request != NULL ? (__bridge Request *)client->request : nil;
+//        Http *http = (__bridge Http *)client->http;
+//        
+//        [http invokeReq:request invokeRes:response];
+//
+//        return 0;
+//    }
+    return 0;
+}
+
+int on_message_complete(http_parser *parser) {
     @autoreleasepool {
         client_t *client = (client_t *)parser->data;
         Response *response = client->response != NULL ? (__bridge Response *)client->response : nil;
@@ -110,7 +134,7 @@ int on_headers_complete(http_parser* parser) {
         Http *http = (__bridge Http *)client->http;
         
         [http invokeReq:request invokeRes:response];
-
+        
         return 0;
     }
 }
@@ -140,8 +164,10 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
         client->last_header_field = NULL;
         
         settings.on_headers_complete = on_headers_complete;
+        settings.on_message_complete = on_message_complete;
         settings.on_header_field = on_header_field;
         settings.on_header_value = on_header_value;
+        settings.on_url = on_url;
         
         uv_read_start((uv_stream_t*)&client->handle, on_alloc, on_read);
 }
@@ -160,6 +186,9 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
 
 - (BOOL) listenWithIP:(NSString *)ip atPort:(int)port callback:(void (^)(Request *req, Response *res))cb {
     int r = uv_tcp_bind(uv_tcp, uv_ip4_addr([ip cStringUsingEncoding:NSASCIIStringEncoding], port));
+    
+    _ip = ip;
+    _port = port;
     
     if (r) {
         return NO;
@@ -190,5 +219,9 @@ void on_connection(uv_stream_t* uv_tcp, int status) {
 
 - (void) dealloc {
     free(uv_tcp);
+}
+
+- (NSString *)description {
+    return [NSString stringWithFormat:@"<Http: 0x%lx ip:%@ port:%d>", self, _ip, _port];
 }
 @end

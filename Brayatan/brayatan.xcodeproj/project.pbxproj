@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20E2F389152789B000A63C84 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63B11520F82F00A7C590 /* libuv.a */; };
+		20E2F38A152789B300A63C84 /* libhttp_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63BE1520F83500A7C590 /* libhttp_parser.a */; };
 		20EC637A1520F81300A7C590 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63791520F81300A7C590 /* Cocoa.framework */; };
 		20EC63C81520F87E00A7C590 /* brayatan-common.h in Headers */ = {isa = PBXBuildFile; fileRef = 20EC63C11520F87E00A7C590 /* brayatan-common.h */; };
 		20EC63C91520F87E00A7C590 /* Http.h in Headers */ = {isa = PBXBuildFile; fileRef = 20EC63C21520F87E00A7C590 /* Http.h */; };
@@ -15,11 +17,23 @@
 		20EC63CC1520F87E00A7C590 /* Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EC63C51520F87E00A7C590 /* Request.m */; };
 		20EC63CD1520F87E00A7C590 /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 20EC63C61520F87E00A7C590 /* Response.h */; };
 		20EC63CE1520F87E00A7C590 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 20EC63C71520F87E00A7C590 /* Response.m */; };
-		20EC63D31520F89B00A7C590 /* libhttp_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63BE1520F83500A7C590 /* libhttp_parser.a */; };
-		20EC63D41520F89E00A7C590 /* libuv.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EC63B11520F82F00A7C590 /* libuv.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		20E2F38F15278A1C00A63C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63B71520F83500A7C590 /* http_parser.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C3D692EDB432A59FB72344A;
+			remoteInfo = http_parser;
+		};
+		20E2F39115278A1E00A63C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = FC830AC267A152249CF4E152;
+			remoteInfo = uv;
+		};
 		20EC63B01520F82F00A7C590 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
@@ -55,20 +69,6 @@
 			remoteGlobalIDString = 69663840867AD51514E537ED;
 			remoteInfo = test;
 		};
-		20EC63CF1520F89200A7C590 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20EC63A91520F82F00A7C590 /* uv.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = FC830AC267A152249CF4E152;
-			remoteInfo = uv;
-		};
-		20EC63D11520F89500A7C590 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 20EC63B71520F83500A7C590 /* http_parser.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2C3D692EDB432A59FB72344A;
-			remoteInfo = http_parser;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -80,13 +80,13 @@
 		20EC63811520F81300A7C590 /* brayatan-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "brayatan-Prefix.pch"; sourceTree = "<group>"; };
 		20EC63A91520F82F00A7C590 /* uv.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = uv.xcodeproj; path = /Users/amartoq/proj/osx/brayatan/libbrayatan/../libuv/uv.xcodeproj; sourceTree = "<absolute>"; };
 		20EC63B71520F83500A7C590 /* http_parser.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = http_parser.xcodeproj; path = "/Users/amartoq/proj/osx/brayatan/libbrayatan/../http-parser/http_parser.xcodeproj"; sourceTree = "<absolute>"; };
-		20EC63C11520F87E00A7C590 /* brayatan-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "brayatan-common.h"; sourceTree = "<group>"; };
-		20EC63C21520F87E00A7C590 /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Http.h; sourceTree = "<group>"; };
-		20EC63C31520F87E00A7C590 /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Http.m; sourceTree = "<group>"; };
-		20EC63C41520F87E00A7C590 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Request.h; sourceTree = "<group>"; };
-		20EC63C51520F87E00A7C590 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Request.m; sourceTree = "<group>"; };
-		20EC63C61520F87E00A7C590 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Response.h; sourceTree = "<group>"; };
-		20EC63C71520F87E00A7C590 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Response.m; sourceTree = "<group>"; };
+		20EC63C11520F87E00A7C590 /* brayatan-common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = "brayatan-common.h"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		20EC63C21520F87E00A7C590 /* Http.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Http.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		20EC63C31520F87E00A7C590 /* Http.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Http.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		20EC63C41520F87E00A7C590 /* Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Request.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		20EC63C51520F87E00A7C590 /* Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Request.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		20EC63C61520F87E00A7C590 /* Response.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Response.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		20EC63C71520F87E00A7C590 /* Response.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Response.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20EC63D41520F89E00A7C590 /* libuv.a in Frameworks */,
-				20EC63D31520F89B00A7C590 /* libhttp_parser.a in Frameworks */,
+				20E2F38A152789B300A63C84 /* libhttp_parser.a in Frameworks */,
+				20E2F389152789B000A63C84 /* libuv.a in Frameworks */,
 				20EC637A1520F81300A7C590 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,8 +211,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				20EC63D21520F89500A7C590 /* PBXTargetDependency */,
-				20EC63D01520F89200A7C590 /* PBXTargetDependency */,
+				20E2F39215278A1E00A63C84 /* PBXTargetDependency */,
+				20E2F39015278A1C00A63C84 /* PBXTargetDependency */,
 			);
 			name = brayatan;
 			productName = brayatan;
@@ -306,15 +306,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		20EC63D01520F89200A7C590 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = uv;
-			targetProxy = 20EC63CF1520F89200A7C590 /* PBXContainerItemProxy */;
-		};
-		20EC63D21520F89500A7C590 /* PBXTargetDependency */ = {
+		20E2F39015278A1C00A63C84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = http_parser;
-			targetProxy = 20EC63D11520F89500A7C590 /* PBXContainerItemProxy */;
+			targetProxy = 20E2F38F15278A1C00A63C84 /* PBXContainerItemProxy */;
+		};
+		20E2F39215278A1E00A63C84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = uv;
+			targetProxy = 20E2F39115278A1E00A63C84 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

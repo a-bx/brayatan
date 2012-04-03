@@ -28,6 +28,7 @@
 @implementation Request
 
 @synthesize headers;
+@synthesize url;
 
 - (id) init {
     if (self = [super init]) {

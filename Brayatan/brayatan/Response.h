@@ -37,6 +37,7 @@ void on_close(uv_handle_t *handle);
 @property (nonatomic) int status;
 
 - (id)initWithClient:(client_t*) client;
+- (Response *)setHeader:(NSString *)header value:(NSString *)value;
 - (BOOL)endWithBody:(NSString *)body;
 
 @end
